@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { formatEther, parseEther } from "@ethersproject/units";
 import { BigNumber } from 'ethers'
-import { useEtherBalance, useEthers, useSendTransaction, useLookupAddress } from "@usedapp/core";
+import { useEtherBalance, useEthers, useSendTransaction } from "@usedapp/core";
 import { useEffect, useState } from "react";
 import head from "next/head";
 import { Button } from "../components/ConnectWallet";
@@ -33,7 +33,7 @@ const SendTransaction: React.FC = () => {
 
   return (
     <>
-      <p>Your wallet address: {useLookupAddress()}</p>
+      <p>Your wallet address: {account}</p>
       <p>Balance is: {formatEther(balance ?? BigNumber.from("0"))}</p>
       <p>Wallet to send to: <Input type="text" value={address} onChange={e => setAddress(e.target.value)} disabled={disabled}></Input></p>
       <p>Amount to send: <Input type="number" value={amount} onChange={e => setAmount(e.target.value)} disabled={disabled}></Input></p>

@@ -8,16 +8,16 @@ import { useEthers } from "@usedapp/core";
 import SendTransaction from "../components/SendTransaction";
 
 const Home: NextPage = () => {
-  // const account = null;
   const { account, deactivate } = useEthers()
-  //implement logic to find if account is logged in or not = DONE
-  return (
+   //implement logic to find if account is logged in or not = DONE
+   return account == null ? (
+    <ConnectWallet></ConnectWallet>
+  ) : (
     <>
-      {!account && <ConnectWallet></ConnectWallet>}
-      {/* {account && <Button onClick={deactivate}>Disconnect</Button>} */}
-      {account && <SendTransaction></SendTransaction>}
+      <SendTransaction></SendTransaction>
+      <Button onClick={deactivate}>Disconnect</Button>
     </>
-  )
+  );
 };
 
 export default Home;
