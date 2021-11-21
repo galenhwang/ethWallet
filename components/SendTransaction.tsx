@@ -20,12 +20,6 @@ const SendTransaction: React.FC = () => {
       setAddress('')
     }
   }, [state])
-  //implement logic to display address of logged in wallet = DONE
-  //implement logic to display eth balance of logged in wallet = DONE
-  //implement logic to take in an input of a wallet address and state to hold it = DONE
-  //implement logic to take in an input of a amount to send and state to hold it = DONE
-  //implement logic for the button to send a transaction with the current values of the wallet = DONE
-  //address state and the amount state = DONE
   const handleClick = () => {
     setDisabled(true)
     sendTransaction({ to: address, value: parseEther(amount) })
