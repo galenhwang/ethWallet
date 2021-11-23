@@ -18,7 +18,10 @@ Uses React/TypeScript, [Next.js](https://nextjs.org/docs/basic-features/typescri
 - Show Ethereum values in USD
 
 ## To run
+From repository root (current directory level)
+* `yarn build`
+* `yarn start`
+* Visit http://localhost:3000 to use with a browser that has the Metamask extension (eg. Chrome, Firefox)
+## Other commands
 * `yarn`
 * `yarn dev`
-* `yarn start`
-* `yarn build`
