@@ -1,14 +1,13 @@
-import styled from "styled-components";
 import { formatEther, parseEther } from "@ethersproject/units";
 import { BigNumber } from 'ethers'
 import { useEtherBalance, useEthers, useSendTransaction } from "@usedapp/core";
 import { useEffect, useState } from "react";
-import head from "next/head";
-import { Button } from "../components/ConnectWallet";
+import { Button } from "../components/Button";
+import { Input } from "./Input";
 
 const SendTransaction: React.FC = () => {
   const { account } = useEthers()
-  const balance  = useEtherBalance(account)
+  const balance = useEtherBalance(account)
   const [address, setAddress] = useState("init")
   const [amount, setAmount] = useState("init")
   const [disabled, setDisabled] = useState(false)
@@ -37,13 +36,5 @@ const SendTransaction: React.FC = () => {
     </>
   );
 };
-
-const Input = styled.input`
-  padding: 0.5em;
-  margin: 0.5em;
-  color: palevioletred;
-  background: papayawhip;
-  border: none;
-  border-radius: 3px;`
 
 export default SendTransaction;

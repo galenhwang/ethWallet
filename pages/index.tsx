@@ -3,7 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import styled from "styled-components";
-import ConnectWallet, { Button } from "../components/ConnectWallet";
+import ConnectWallet from "../components/ConnectWallet";
+import { Button } from "../components/Button";
 import { useEthers } from "@usedapp/core";
 import SendTransaction from "../components/SendTransaction";
 
